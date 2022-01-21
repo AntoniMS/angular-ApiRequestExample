@@ -1,0 +1,7 @@
+<div *ngIf="characterList" class="container">
+
+    <div *ngFor="let character of characterList" class="char">
+      <h4>{{ character.id }} - {{ character.name }}</h4>
+      <img [src]="character.image" [alt]="character.name">
+    </div>
+  </div>
