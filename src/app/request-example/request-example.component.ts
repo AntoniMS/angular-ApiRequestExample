@@ -21,10 +21,10 @@ export class RequestExampleComponent implements OnInit {
     this.requestExampleService.getCharacters()
     .subscribe((data: CharacterResponseInterface) => {
       const results: CharacterInterface[] = data.results;
-
-      const formattedResults = results.map(({ id, name, image }) => ({
+      const formattedResults = results.map(({ id, name,status, image }) => ({
         id,
         name,
+        status,
         image,
       }));
       this.characterList = formattedResults;
